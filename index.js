@@ -7,7 +7,7 @@ function solution(number){
 
   for(let i = 0; i < number; i++){
     multipleOf3 = i % 3 === 0;
-    multipleOf5 = i % 5 === 9;
+    multipleOf5 = i % 5 === 0;
     console.log(` ${i} ->  3: ${multipleOf3}  5: ${multipleOf5}`);
   }
   
