@@ -36,5 +36,5 @@ function solution(number) {
   return sum;
 }
 
-solution(84836);
+solution(34);
 
