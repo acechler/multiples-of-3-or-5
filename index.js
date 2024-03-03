@@ -4,3 +4,5 @@
 function solution(number){
   
 }
+
+console.log("hello world");
