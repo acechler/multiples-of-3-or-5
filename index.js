@@ -7,27 +7,26 @@ function solution(number) {
     return 0;
   }
 
-  const multiples = [];
+  const multiplesSet = new Set();
   let multipleOf5;
   let multipleOf3;
 
-  /// Add values to the array that meet requirements.
-  // Multiple of 3 = true
-  // multiple of 5 = true
-  // Values not already in array = true 
+  /// Add values to the set that meet requirements.
+  // Multiple of 3 = true.
+  // multiple of 5 = true.
   // Multiple is less than arguement.
   for (let i = 1; i < number; i++) {
     multipleOf3 = i % 3 === 0;
     multipleOf5 = i % 5 === 0;
-    const checkForMultiple = i;
-    const notInArray = !multiples.includes(checkForMultiple);
     if (multipleOf3 === true || multipleOf5 === true) {
-        if(notInArray && i < number){
-            multiples.push(i);
+        if(i < number){
+          multiplesSet.add(i);
         }
     }
   }
 
+  // add data from set to multiples.
+  const multiples = [...multiplesSet];
   // Add the list of values.
   let sum = 0;
   multiples.forEach(num =>{
@@ -36,5 +35,5 @@ function solution(number) {
   return sum;
 }
 
-solution(34);
+console.log(solution(84836));
 
