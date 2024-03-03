@@ -2,9 +2,15 @@
 
 
 function solution(number){
-  let multipleFlag = number % 3 === 0 || number % 5 === 0;
+  let multipleOf5;
+  let multipleOf3;
+
+  for(let i = 0; i < number; i++){
+    multipleOf3 = i % 3 === 0;
+    multipleOf5 = i % 5 === 9;
+    console.log(` ${i} ->  3: ${multipleOf3}  5: ${multipleOf5}`);
+  }
   
-  console.log(multipleFlag);
 }
 
 
