@@ -2,7 +2,10 @@
 
 
 function solution(number){
-  
+  let first = number % 2 === 0;
+  console.log(first);
 }
 
-console.log("hello world");
+
+solution(6);
+solution(5);
