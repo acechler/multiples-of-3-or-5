@@ -2,6 +2,7 @@
 
 function solution(number) {
 
+  /// Guard against negative arguements.
   if(number < 0){
     return 0;
   }
@@ -9,10 +10,15 @@ function solution(number) {
   const multiples = [];
   let multipleOf5;
   let multipleOf3;
+
+  /// Add values to the array that meet requirements.
+  // Multiple of 3 = true
+  // multiple of 5 = true
+  // Values not already in array = true 
+  // Multiple is less than arguement.
   for (let i = 1; i < number; i++) {
     multipleOf3 = i % 3 === 0;
     multipleOf5 = i % 5 === 0;
-    //console.log(` ${i} ->  3: ${multipleOf3}  5: ${multipleOf5}`);
     const checkForMultiple = i;
     const notInArray = !multiples.includes(checkForMultiple);
     if (multipleOf3 === true || multipleOf5 === true) {
@@ -22,15 +28,13 @@ function solution(number) {
     }
   }
 
+  // Add the list of values.
   let sum = 0;
   multiples.forEach(num =>{
     sum+=num;
   });
-  console.log(sum);
-  for (let i = 0; i < multiples.length; i++){
-    console.log(multiples[i]);
-  }
+  return sum;
 }
 
-solution(10);
+solution(84836);
 
